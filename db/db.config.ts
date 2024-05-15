@@ -1,13 +1,13 @@
 import { TypeOrmModuleOptions } from '@nestjs/typeorm';
-import { GqlModuleOptions } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
+import { password } from './password';
 
 export const databaseConfig: TypeOrmModuleOptions = {
     type: 'postgres',
     host: 'localhost',
     port: 5432,
     username: 'postgres',
-    password: 'postgres',
+    password: password,
     database: 'Usuarios',
     autoLoadEntities: true,
     synchronize: true,
